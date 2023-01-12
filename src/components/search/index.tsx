@@ -1,5 +1,6 @@
 import * as React from "react";
 import { useNavigate } from "react-router-dom";
+import { SearchIcon } from "../icons";
 import "./styles.css";
 
 type SearchProps = {
@@ -26,23 +27,24 @@ const Search = ({ searchContent }: SearchProps) => {
           placeholder="Movie title"
           onChange={(e) => setSearch({ ...search, input: e.target.value })}
         />
-        <select
-          className="search__select"
-          name="type"
-          onChange={(e) => setSearch({ ...search, type: e.target.value })}
-        >
-          <option value="movie" defaultValue="movie">
-            Movie
-          </option>
-          <option value="series">Series</option>
-          <option value="episode">Episode</option>
-        </select>
+          <select
+            className="search__select"
+            name="type"
+            onChange={(e) => setSearch({ ...search, type: e.target.value })}
+          >
+              <option className='test' value="movie" defaultValue="movie">
+                Movie
+              </option>
+              <option value="series">Series</option>
+              <option value="episode">Episode</option>
+          </select>
         <button
           className="search__button"
           type="submit"
           onClick={() => searchContent(search.input, search.type)}
         >
-          Search
+          <SearchIcon />
+          <h3>Search</h3>          
         </button>
       </div>
     </div>

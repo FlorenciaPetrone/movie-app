@@ -20,7 +20,7 @@ const List = ({ movieListGrupped, isResponse }: ListProps) => {
         flattedResults.map((m) => <Row year={m[0]} movies={m[1]} key={m[0]} />)
       ) : !isResponse ? (
         <h3 className="not-results">
-          We dont have result for what you are looking for, please change your
+          UPPS... We dont have result for what you are looking for, please change your
           search.
         </h3>
       ) : (

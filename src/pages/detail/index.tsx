@@ -46,6 +46,7 @@ const MovieDetails = () => {
           backgroundSize: "cover",
           backgroundImage: `url("${detailMovie.Poster}")`,
           backgroundPosition: "center center",
+          // backgroundAttachment: 'fixed'
         }}
       >
         <h1 className="detail-image-title">{detailMovie.Title}</h1>
